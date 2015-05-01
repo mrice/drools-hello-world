@@ -1,0 +1,11 @@
+package drools
+
+import com.michaelrice.demo.Message;
+
+rule "Hello World Part 2"
+    dialect "mvel"
+    when
+        m : Message( text == "goodbye" )
+    then
+        modify ( m ) { text = "buh bye" };
+end
